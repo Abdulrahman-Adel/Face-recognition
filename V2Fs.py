@@ -10,7 +10,7 @@ import numpy as np
 from mtcnn.mtcnn import MTCNN
 import os
 
-def  V2Fs(Video_path,person_name, required_size = (160, 160)):
+def  V2Fs(Video_path, person_name, required_size = (160, 160)):
     '''
     Parameters
     ---------- 
