@@ -25,7 +25,7 @@ def  V2Fs(Video_path,person_name, counter, required_size = (160, 160)):
     
     Returns
     -------
-    None.
+    A dataset of extracted faces from each frame with it's respective label (persons' name).
     '''
     
     cap = cv2.VideoCapture(Video_path)
