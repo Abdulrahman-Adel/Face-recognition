@@ -210,8 +210,7 @@ def Camera_Test():
             #Predicting
             result = clf.predict(face_Emb)
             prob = clf.predict_proba(face_Emb)
-            
-            print(prob[0])
+           
             if result[0] == 0 and prob[0][0] > 0.99:
                 #Drawing A rectangle
                 color = (0, 255, 0)
