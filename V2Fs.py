@@ -8,6 +8,7 @@ Created on Wed Apr 28 00:15:12 2021
 import cv2
 import numpy as np
 import os
+from random import shuffle
 
 def  V2Fs(Video_path,person_name, counter, required_size = (160, 160)):
     '''
@@ -81,9 +82,13 @@ for folder in os.listdir(Video_dir):
             X.extend(trainX)
             y.extend(trainy)
            
-
+#Shuffling the dataset
+dataset = list(zip(X, y))
+dataset = shuffle(dataset)
+X, y = zip(*dataset)
+        
 #Saving the dataset
-np.savez_compressed('Face_authen.npz', X, y)
+np.savez_compressed('Face_authen.npz', list(X), list(y))
 print("Dataset Saved !!")
         
            
